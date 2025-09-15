@@ -1,33 +1,119 @@
-
+/* Reset and base styles */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-
-*{
-
-  padding : 0 ;
-  margin : 0; 
-  box-sizing : border-box;
-  font-family: outfit;
-  scroll-behavior: smooth;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-body{
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f7f8fa;
+  color: #222;
   min-height: 100vh;
 }
-a{
-  text-decoration: none;
-  color: inherit;
 
+/* Container */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
 }
-.app{
-  width: 80%;
-  margin:auto;
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  color: #ff6e7f;
+  margin-bottom: 16px;
 }
-@keyframes fadeIn{
-  0%{
-    opacity: o;
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, #ff6e7f 0%, #bfe9ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+button:hover {
+  background: #ff6e7f;
+  color: #fff;
+}
+
+/* Inputs */
+input, select, textarea {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  outline: none;
+  transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #ff6e7f;
+}
+
+/* Links */
+a {
+  color: #ff6e7f;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #bfe9ff;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.grid {
+  display: grid;
+  gap: 24px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .app {
+    padding: 16px 8px;
   }
-  100%{
-    opacity:1;
+  .card {
+    padding: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .app {
+    padding: 4px;
+    border-radius: 0;
+  }
+  h1, h2, h3 {
+    font-size: 1.3em;
   }
 }
 
